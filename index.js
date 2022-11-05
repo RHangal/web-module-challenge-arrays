@@ -46,9 +46,12 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy([array]){
+  return [array.slice()];
 }
+console.log(copy([originalFlavors]));
+
+
 
 
 
