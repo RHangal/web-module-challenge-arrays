@@ -67,9 +67,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(array){
+  if(array.length === 31) {
+    return true;
+  } else {
+    return false;
+  }
  }
+
+ console.log(is31Flavors(originalFlavors));
 
 
 
@@ -86,9 +92,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(array, newFlavor){
+  array.unshift(newFlavor);
+  return array;
  }
+
+ console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 
 
@@ -104,9 +113,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+ array.pop();
+ return array;
 }
+
+console.log(removeLastFlavor(originalFlavors));
 
 
 
@@ -122,9 +134,12 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, index){
   /*your code here*/
+  return array[index];
 }
+
+console.log(getFlavorByIndex(originalFlavors, 6));
 
 
 
@@ -142,9 +157,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(array, flavor){
   /*your code here*/
+  let index = array.indexOf(flavor);
+  array.splice(index, 1);
+  return array
 }
+
+console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 
@@ -166,10 +186,21 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-
-function filterByWord(/*your code here*/){
-  /*your code here*/
+let newArray = [];
+function filterByWord(array, flavor){
+ 
+  for (let i = 0; i < array.length; i++) {
+  if(array[i].includes(flavor)) {
+  
+    newArray.push(array[i]);
+    return newArray
+    } 
+  }
 }
+
+console.log(filterByWord(originalFlavors, "Vanilla"));
+
+
 
 
 
