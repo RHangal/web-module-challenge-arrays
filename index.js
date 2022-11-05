@@ -188,17 +188,17 @@ Use the filterByWord function below to do the following:
 
 let newArray = [];
 function filterByWord(array, flavor){
- 
-  for (let i = 0; i < array.length; i++) {
-  if(array[i].includes(flavor)) {
-  
+ for (let i = 0; i < array.length; i++) {
+  if (array[i].includes(flavor)) {
     newArray.push(array[i]);
-    return newArray
+
     } 
-  }
+  } return(newArray)
 }
 
-console.log(filterByWord(originalFlavors, "Vanilla"));
+
+// console.log(originalFlavors)
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 
